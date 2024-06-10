@@ -1,0 +1,40 @@
+.criteria-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+  
+.criteria-row select,
+.criteria-row input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+  max-width: 200px; 
+}
+  
+.criteria-row button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+  
+.criteria-row button:hover {
+  background-color: #d32f2f;
+}
+  
+.criteria-row button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.error-text {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+}
