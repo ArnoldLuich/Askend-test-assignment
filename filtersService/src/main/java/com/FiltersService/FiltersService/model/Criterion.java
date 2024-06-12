@@ -1,14 +1,15 @@
 package com.FiltersService.FiltersService.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Getter
 @Setter
 @Entity
 @ToString
+@AllArgsConstructor
+@NoArgsConstructor
+
 public class Criterion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
