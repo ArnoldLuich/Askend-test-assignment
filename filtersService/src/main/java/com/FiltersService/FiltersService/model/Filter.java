@@ -17,6 +17,7 @@ public class Filter {
     private String selection;
 
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    // Join the criteria list to the filter entity using the filter_id column
     @JoinColumn(name = "filter_id")
     private List<Criterion> criteria;
 

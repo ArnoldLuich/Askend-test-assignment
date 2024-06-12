@@ -17,9 +17,12 @@ const FilterDialog = ({ onClose }) => {
   };
 
   const removeCriteria = (index) => {
+    // There must be at least one criteria
     if (criteria.length === 1) return;
 
+    // Filter out the criteria at the specified index
     const newCriteria = criteria.filter((_, i) => i !== index);
+    // Filter out the corresponding error at the specified index
     const newCriteriaErrors = criteriaErrors.filter((_, i) => i !== index);
 
     setCriteria(newCriteria);
@@ -27,11 +30,13 @@ const FilterDialog = ({ onClose }) => {
   };
 
   const handleCriteriaChange = (index, key, value) => {
+    // Map over the criteria array and update the criterion at the specified index
     const newCriteria = criteria.map((criterion, i) => 
       i === index ? { ...criterion, [key]: value } : criterion
     );
     setCriteria(newCriteria);
 
+    // Map over the criteria errors array and update the error at the specified index
     const newCriteriaErrors = criteriaErrors.map((error, i) => 
       i === index ? { ...error, [key]: !value } : error
     );
