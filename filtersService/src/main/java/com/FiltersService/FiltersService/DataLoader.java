@@ -38,6 +38,7 @@ public class DataLoader implements CommandLineRunner {
 
     }
 
+    // Helper method to create test data
     private void createAndSaveFilter(Long id, String name, String selection, List<Criterion> criteria) {
         Filter filter = new Filter();
         filter.setId(id);
